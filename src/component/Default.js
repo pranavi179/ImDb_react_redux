@@ -8,7 +8,7 @@ export default class Default extends Component {
     return (
       <div>
         <h3>Im the content </h3>
-        <h1>Redux Movies</h1>
+        <h1>Movies Page to be here</h1>
         <div className = "container">
           <MovieList />
           <MovieDetails />

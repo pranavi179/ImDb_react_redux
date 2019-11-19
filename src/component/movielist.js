@@ -7,7 +7,7 @@ const MovieList = (props) => {
         return(
             <div key = {movie.title}>
                 <span>{movie.title}</span>
-                <button onClick = { () => props.selectMovie(movie)}>details </button>
+                <button onClick = {() => props.selectMovie(movie)}>details </button>
             </div>
         )
     })

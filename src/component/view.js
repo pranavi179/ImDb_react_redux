@@ -1,12 +1,12 @@
 import React from "react";
 import { Layout, Menu, Breadcrumb, Icon } from "antd";
-// import { Link } from 'react-router-dom';
-// import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
+import ReactDOM from 'react-dom';
 
 import { Switch, Route } from "react-router-dom";
-// import ProductList from "./productlist";
-// import Details from "./Details";
-// import Cart from "./cart";
+import MovieList from "./movielist";
+import MovieDetails from "./MovieDetails";
+
 import Default from "./Default";
 import IMDb from './images/IMDb.png';
 // import SearchBox from 'antd-search-box';
@@ -214,9 +214,9 @@ MovieList                  </a>
             </Sider>
             <Content style={{ padding: "0 24px", minHeight: 280 }}>
               <Switch>
-                {/* <Route exact path="/productlist" component={ProductList} />
-                <Route path="/Details" component={Details} />
-                <Route path="/cart" component={Cart} /> */}
+                <Route exact path="/movielist" component={MovieList} />
+                <Route path="/MovieDetails" component={MovieDetails} />
+               
                 <Route component={Default} />
               </Switch>
             </Content>

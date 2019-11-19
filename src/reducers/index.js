@@ -27,6 +27,6 @@ import { combineReducers } from 'redux';
  export default combineReducers(
      {
          movies : moviesReducer,                   //parameters movies. gets the data from movieReducer
-         selectedMovie: selectedMovieReducer
+         selectedMovie: selectedMovieReducer,
      }
  )

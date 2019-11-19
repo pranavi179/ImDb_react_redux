@@ -1,5 +1,5 @@
 import React from 'react';
-// import IMDb from './component/images/IMDb.png';
+import IMDb from './component/images/IMDb.png';
 import './App.css';
 import "antd/dist/antd.css";
 import View from "./component/view";
@@ -12,8 +12,8 @@ import SignUpForm from "./component/signup";
 
 
 import { Switch, Route } from "react-router-dom";
-// import MovieDetails from './component/MovieDetails';
-// import MovieList from './component/movielist';
+import MovieDetails from './component/MovieDetails';
+import MovieList from './component/movielist';
 
 
 
@@ -47,10 +47,12 @@ function App() {
     {/* <Navbar /> */}
     <Switch>
          {/* <img src={ IMDb } className="App-logo" alt="logo" /> */}
-      < Default />
+      {/* < Default /> */}
       <Route exact path="/" component={View} />
       <Route exact path="/signin" component={SignInForm} />
       <Route exact path="/signup" component={SignUpForm} />
+      <Route exact path="/default" component={Default} />
+
     </Switch>
   </React.Fragment>
 
