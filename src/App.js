@@ -28,9 +28,10 @@ function App() {
     <Switch>
          {/* <img src={ IMDb } className="App-logo" alt="logo" /> */}
       {/* < Default /> */}
-      <Route  exact path="/" component={View} />
       <Route exact path="/signin" component={SignInForm} />
       <Route exact path="/signup" component={SignUpForm} />
+      <Route path="/" component={View} />
+      
       <Route exact path="/default" component={Default} />
 
     </Switch>
