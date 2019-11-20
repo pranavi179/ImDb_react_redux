@@ -1,6 +1,7 @@
 import  React from 'react';
 import { connect } from 'react-redux';
-import { Button } from 'antd';
+// import { selectedMovie } from '../reducers/index';
+
 
 
 const MovieDetails = (props) => {
@@ -24,14 +25,14 @@ const MovieDetails = (props) => {
                     <p>RAting: { props.selectedmovie.rating}</p>
                 </div>
             </div>
-        )
+        );
     }
 }
 
 const mapStateToProps = (state) => {
     return {
         selectedMovie : state.selectedMovie
-    }
+}
 }
 export default connect(mapStateToProps)(
     MovieDetails

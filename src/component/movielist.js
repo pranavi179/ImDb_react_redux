@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Button } from 'antd';
+
 import { selectMovie } from '../actions/index';
 
 const MovieList = (props) => {
@@ -7,7 +9,13 @@ const MovieList = (props) => {
         return(
             <div key = {movie.title}>
                 <span>{movie.title}</span>
-                <button onClick = {() => props.selectMovie(movie)}>details </button>
+                
+                <Button onClick = {() => props.selectMovie(movie)}> details </Button>
+
+                <div style={{display:'none'}}>
+                    <h1>hello</h1>
+                </div>
+
             </div>
         )
     })

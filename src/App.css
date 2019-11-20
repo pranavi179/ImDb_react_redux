@@ -51,7 +51,7 @@
   --mainYellow: #ffa400;
 }
 body {
-  font-family: "Big Shoulders Text", cursive !important;
+  font-family: "Big Shoulders Text" !important;
   background: var (--mainWhite) !important;
   color: var(--mainDark) !important;
 }
@@ -68,9 +68,9 @@ body {
 }
 .navbar {
   justify-content: flex-start !important;
-  border-top: 1px solid #444444;
-  color: #f3f3f3;
-  font : 10pt Verdana,Arial;
+  border-top: 1px solid #000000;
+  color: #ffffff;
+  font : 14pt Verdana,Arial;
   height: 83px;
 
 }

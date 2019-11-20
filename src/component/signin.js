@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 // import axios from "axios";
 
+// import View from './view';
+// import { Modal } from "antd";
+
 class SignInForm extends Component {
   constructor() {
     super();
@@ -27,7 +30,11 @@ class SignInForm extends Component {
   }
   render() {
     return (
-      <div className="FormCenter">
+     
+   
+      <div className="container">
+      
+         {/* <View /> */}
         <form
           onSubmit={this.handleSubmit}
           className="FormField"
