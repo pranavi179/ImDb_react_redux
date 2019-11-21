@@ -101,18 +101,14 @@ export default class View extends React.Component {
 
             <Menu.Item key="2">
               {" "}
-              <a
-                href="https://ant.design"
-                target="_self"
-                rel="noopener noreferrer"
-              >
-                Movies{" "}
+              <a href="/movielist" target="_self" rel="noopener noreferrer">
+                Movies List{" "}
               </a>
             </Menu.Item>
             <Menu.Item key="2">
               {" "}
               <a href="/MovieDetails" target="_self" rel="noopener noreferrer">
-                Tv
+               Movie Details
               </a>{" "}
             </Menu.Item>
             <Menu.Item key="3">
@@ -133,7 +129,6 @@ export default class View extends React.Component {
           <Breadcrumb style={{ margin: "16px 0" }}>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
             <Breadcrumb.Item>MovieList</Breadcrumb.Item>
-            {/* <Breadcrumb.Item>App</Breadcrumb.Item> */}
             <Breadcrumb.Item>Movie</Breadcrumb.Item>
           </Breadcrumb>
           <Layout style={{ padding: "24px 0", background: "#fff" }}>

@@ -1,39 +1,37 @@
-import  React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
+// import MovieDetails from "./component/MovieDetails";
+
 // import { selectedMovie } from '../reducers/index';
 
-
-
-const MovieDetails = (props) => {
-    if(!props.selectedMovie){
-        return(
-        <div className = "details-container" style = {{width: '70%'}}>
-            <h2>Movie</h2>
-            <div className="properties">
-                <p>select Movie</p>
-            </div>
+const MovieDetails = ({ selectedMovie }) => {
+  if (!selectedMovie) {
+    return (
+      <div className="details-container" style={{ width: "70%" }}>
+        <h2>Movie</h2>
+        <div className="properties">
+          <p>Select Movie</p>
         </div>
-        )
-    }
-    else {
-        return(
-            <div className="details-container" style={{width:'70%' }}>
-                <h2>Movie</h2>
-                <div className="properties">
-                    <p>Title: { props.selectedMovie}</p>
-                    <p>Release Date : {props.selectedMovie.releaseDate}</p>
-                    <p>RAting: { props.selectedmovie.rating}</p>
-                </div>
-            </div>
-        );
-    }
-}
+      </div>
+    );
+  } else {
+    return (
+      <div className="details-container" style={{ width: "70%" }}>
+        <h2>Movie</h2>
+        <div className="properties">
+          <p>Title:{selectedMovie.title}</p>
+          {/* <p>Release Date:{props.selectedMovie.releaseDate}</p> */}
+          <p>Release Date:{selectedMovie.releaseDate}</p>
+          <p>Rating:{selectedMovie.rating}</p>
+        </div>
+      </div>
+    );
+  }
+};
 
-const mapStateToProps = (state) => {
-    return {
-        selectedMovie : state.selectedMovie
-}
-}
-export default connect(mapStateToProps)(
-    MovieDetails
-);
+const mapStateToProps = state => {
+  return {
+    selectedMovie: state.selectedMovie
+  };
+};
+export default connect(mapStateToProps)(MovieDetails);
