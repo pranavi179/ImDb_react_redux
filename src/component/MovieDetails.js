@@ -1,8 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-// import MovieDetails from "./component/MovieDetails";
 
-// import { selectedMovie } from '../reducers/index';
+// import { selectedMovie } from "../reducers/index";
 
 const MovieDetails = ({ selectedMovie }) => {
   if (!selectedMovie) {

@@ -1,34 +1,43 @@
 import React from "react";
 import { Layout, Menu, Breadcrumb, Icon } from "antd";
-// import { Link } from 'react-router-dom';
-// import ReactDOM from 'react-dom';
+
 
 import { Switch, Route } from "react-router-dom";
 import MovieList from "./movielist";
 import MovieDetails from "./MovieDetails";
 import WatchList from "./watchlist";
-
+import MDetails from "./MDetails";
+import Movie from "./Movie";
+import Mlist from "./Mlist";
 import Default from "./Default";
 import IMDb from "./images/IMDb.png";
-// import SearchBox from 'antd-search-box';
-// import 'antd-search-box/assets/index.css';
+import { Grid } from 'antd';
+import MList from "./Mlist";
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 
 export default class View extends React.Component {
-  state = {
-    current: "mail"
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      movie : movie.slice(0, 12),
+      current: "mail"
+    };
+  } 
+  
   handleClick = e => {
     console.log("click ", e);
     this.setState({
       current: e.key
     });
   };
+  
 
   render() {
-    return (
+    console.log(this.state);
+        return (
       <Layout>
         <Header className="header">
           <div className="logo" />
@@ -108,7 +117,7 @@ export default class View extends React.Component {
             <Menu.Item key="2">
               {" "}
               <a href="/MovieDetails" target="_self" rel="noopener noreferrer">
-               Movie Details
+                Movie Details
               </a>{" "}
             </Menu.Item>
             <Menu.Item key="3">
@@ -117,10 +126,22 @@ export default class View extends React.Component {
                 Celebs
               </a>
             </Menu.Item>
+            <Menu.Item key="3">
+              {" "}
+              <a href="/MDetails" target="_self" rel="noopener noreferrer">
+                MDetails
+              </a>
+            </Menu.Item>
             <Menu.Item key="2">
               {" "}
               <a href="/watchlist" target="_self" rel="noopener noreferrer">
                 Watchlist
+              </a>
+            </Menu.Item>
+            <Menu.Item key="2">
+              {" "}
+              <a href="/Mlist" target="_self" rel="noopener noreferrer">
+                Movie
               </a>
             </Menu.Item>
           </Menu>
@@ -175,9 +196,15 @@ export default class View extends React.Component {
               </Menu>
             </Sider>
             <Content style={{ padding: "0 24px", minHeight: 280 }}>
+              <Grid id ="content">
+                <MList 
+                  movie = { this.state.movie} />
+              </Grid>
               <Switch>
                 <Route exact path="/movielist" component={MovieList} />
                 <Route exact path="/MovieDetails" component={MovieDetails} />
+                <Route exact path="/MDetails" component={MDetails} />
+                <Route exact path="/Mlist" component={Movie} />
                 <Route exact path="/watchlist" component={WatchList} />
 
                 <Route component={Default} />
