@@ -1,25 +1,32 @@
 import React from "react";
 import Movie from "./Movie";
+import PropTypes from "prop-types";
+
 
 class MList extends React.Component {
   render() {
     return (
       <div>
-        {this.props.movie.map(movie => (
-          <Movie key={movie.id} 
+         {/* {this.props.movies.map((movie) => ( */}
+         { 
+         movies.map(movie => (
+          <Movie 
+          key={movie.id} 
           movie={movie} />
-        ))}
+            
+        ))
+        }
       </div>
     );
   }
 }
 
 MList.propTypes = {
-  movie: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+  movies: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 MList.defaultProps = {
-  movie: []
+  movies: []
 };
 
 export default MList;

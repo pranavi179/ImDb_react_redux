@@ -1,18 +1,16 @@
 import React from "react";
-import { Layout, Menu, Breadcrumb, Icon } from "antd";
-
+import { Layout, Menu, Breadcrumb, Icon, Row, Col } from "antd";
 
 import { Switch, Route } from "react-router-dom";
 import MovieList from "./movielist";
 import MovieDetails from "./MovieDetails";
 import WatchList from "./watchlist";
 import MDetails from "./MDetails";
-import Movie from "./Movie";
-import Mlist from "./Mlist";
+// import Movie from "./Movie";
+// import movies from "./Mlist";
 import Default from "./Default";
 import IMDb from "./images/IMDb.png";
-import { Grid } from 'antd';
-import MList from "./Mlist";
+// import MList from "./Mlist";
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
@@ -22,22 +20,22 @@ export default class View extends React.Component {
     super(props);
 
     this.state = {
-      movie : movie.slice(0, 12),
+      // movies:movies.slice(0, 12),
+      // movies,
       current: "mail"
     };
-  } 
-  
+  }
+
   handleClick = e => {
     console.log("click ", e);
     this.setState({
       current: e.key
     });
   };
-  
 
   render() {
     console.log(this.state);
-        return (
+    return (
       <Layout>
         <Header className="header">
           <div className="logo" />
@@ -196,15 +194,22 @@ export default class View extends React.Component {
               </Menu>
             </Sider>
             <Content style={{ padding: "0 24px", minHeight: 280 }}>
-              <Grid id ="content">
-                <MList 
+              {/* <Grid id ="content"> */}
+              <Row>
+                <Col span={12}>
+                  {" "}
+                  {/* <MList movies={this.state.movies} /> */} 
+                  i want the grid
+                </Col>
+              </Row>
+              {/* <MList 
                   movie = { this.state.movie} />
-              </Grid>
+              </Grid> */}
               <Switch>
                 <Route exact path="/movielist" component={MovieList} />
                 <Route exact path="/MovieDetails" component={MovieDetails} />
                 <Route exact path="/MDetails" component={MDetails} />
-                <Route exact path="/Mlist" component={Movie} />
+      {/* ??S          <Route exact path="/Mlist" component={Movie} /> */}
                 <Route exact path="/watchlist" component={WatchList} />
 
                 <Route component={Default} />
