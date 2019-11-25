@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import axios from "axios";
 
-// import View from './view';
-// import { Modal } from "antd";
 
 class SignInForm extends Component {
   constructor() {
@@ -30,11 +27,8 @@ class SignInForm extends Component {
   }
   render() {
     return (
-     
-   
       <div className="container">
-      
-         {/* <View /> */}
+        {/* <View /> */}
         <form
           onSubmit={this.handleSubmit}
           className="FormField"
@@ -71,7 +65,11 @@ class SignInForm extends Component {
           </div>
 
           <div className="FormField">
-            <button className="FormField__Button mr-20">Sign In</button>
+            <button
+              className="FormField__Button mr-20"
+            >
+              Sign In
+            </button>
             <Link to="/" className="FormField__Link">
               Create an account{" "}
             </Link>

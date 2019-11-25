@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import MovieDetails from './MovieDetails';
-import MovieList from './movielist';
-
+import MovieDetails from "./MovieDetails";
+import MovieList from "./movielist";
 
 export default class Default extends Component {
   render() {
@@ -9,13 +8,11 @@ export default class Default extends Component {
       <div>
         <h3>Im the content </h3>
         <h1>Movies Page to be here</h1>
-        <div className = "container">
+        <div className="container">
           <MovieList />
           <MovieDetails />
-
+        </div>
       </div>
-      </div>
-      
     );
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout, Menu, Breadcrumb, Icon, Row, Col } from "antd";
 
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import MovieList from "./movielist";
 import MovieDetails from "./MovieDetails";
 import WatchList from "./watchlist";
@@ -198,8 +198,7 @@ export default class View extends React.Component {
               <Row>
                 <Col span={12}>
                   {" "}
-                  {/* <MList movies={this.state.movies} /> */} 
-                  i want the grid
+                  {/* <MList movies={this.state.movies} /> */}i want the grid
                 </Col>
               </Row>
               {/* <MList 
@@ -209,8 +208,15 @@ export default class View extends React.Component {
                 <Route exact path="/movielist" component={MovieList} />
                 <Route exact path="/MovieDetails" component={MovieDetails} />
                 <Route exact path="/MDetails" component={MDetails} />
-      {/* ??S          <Route exact path="/Mlist" component={Movie} /> */}
+                {/*           <Route exact path="/Mlist" component={Movie} /> */}
                 <Route exact path="/watchlist" component={WatchList} />
+                {this.props.isLoggedIn ? (
+                  <button>signout</button>
+                ) : (
+                  <li>
+                    <Link to="/signin">Signin</Link>
+                  </li>
+                )}
 
                 <Route component={Default} />
               </Switch>

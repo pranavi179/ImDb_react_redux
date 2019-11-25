@@ -8,7 +8,7 @@ const MovieDetails = ({ selectedMovie }) => {
     return (
       <div className="details-container" style={{ width: "70%" }}>
         <h2>Movie</h2>
-        <div className="properties">
+        <div className="properties" style={{ backgroundColor: "Black " }}>
           <p>Select Movie</p>
         </div>
       </div>
