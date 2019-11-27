@@ -3,7 +3,9 @@ import { connect } from "react-redux";
 
 // import { selectedMovie } from "../reducers/index";
 
-const MovieDetails = ({ selectedMovie }) => {
+const MovieDetails = props => {
+  const selectedMovie = props.location.state;
+  console.log("Props", props.location.state);
   if (!selectedMovie) {
     return (
       <div className="details-container" style={{ width: "70%" }}>
@@ -15,7 +17,10 @@ const MovieDetails = ({ selectedMovie }) => {
     );
   } else {
     return (
-      <div className="details-container" style={{ width: "70%" }}>
+      <div
+        className="details-container"
+        style={{ width: "70%", color: "#000" }}
+      >
         <h2>Movie</h2>
         <div className="properties">
           <p>Title:{selectedMovie.title}</p>
@@ -29,8 +34,6 @@ const MovieDetails = ({ selectedMovie }) => {
 };
 
 const mapStateToProps = state => {
-  return {
-    selectedMovie: state.selectedMovie
-  };
+  return {};
 };
 export default connect(mapStateToProps)(MovieDetails);

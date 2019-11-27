@@ -19,13 +19,13 @@ function Movie(props) {
         style={{ width: 240 }}
         cover={
           <img
-            alt={movie.name}
+            alt={movie.title}
             // src={movie.picture}
             src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
           />
         }
       >
-        <Meta title={movie.name} />
+        <Meta title={movie.title} />
         <Meta description={movie.description} />
       </Card>
     </div>

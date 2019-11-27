@@ -6,7 +6,7 @@ import MovieList from "./movielist";
 import MovieDetails from "./MovieDetails";
 import WatchList from "./watchlist";
 import MDetails from "./MDetails";
-// import Movie from "./Movie";
+import Movie from "./Movie";
 // import movies from "./Mlist";
 import Default from "./Default";
 import IMDb from "./images/IMDb.png";
@@ -81,13 +81,7 @@ export default class View extends React.Component {
 
               <Menu.ItemGroup title="Sign In /Signup">
                 <Menu.Item key="setting:1">
-                  <a
-                    href="./movielist"
-                    target="_self"
-                    rel="noopener noreferrer"
-                  >
-                    MovieList{" "}
-                  </a>
+                  <Link to="/movielist">MovieList</Link>
                   Sign In
                 </Menu.Item>
                 <Menu.Item key="setting:2">
@@ -108,9 +102,7 @@ export default class View extends React.Component {
 
             <Menu.Item key="2">
               {" "}
-              <a href="/movielist" target="_self" rel="noopener noreferrer">
-                Movies List{" "}
-              </a>
+              <Link to="/movielist">Movies List </Link>
             </Menu.Item>
             <Menu.Item key="2">
               {" "}
@@ -206,9 +198,9 @@ export default class View extends React.Component {
               </Grid> */}
               <Switch>
                 <Route exact path="/movielist" component={MovieList} />
-                <Route exact path="/MovieDetails" component={MovieDetails} />
+                <Route exact path="/movieDetails" component={MovieDetails} />
                 <Route exact path="/MDetails" component={MDetails} />
-                {/*           <Route exact path="/Mlist" component={Movie} /> */}
+                          <Route exact path="/Movie" component={Movie} />
                 <Route exact path="/watchlist" component={WatchList} />
                 {this.props.isLoggedIn ? (
                   <button>signout</button>
