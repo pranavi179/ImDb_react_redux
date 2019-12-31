@@ -1,3 +1,30 @@
+#Imdb clone
+
+It is the clone of famous movie application "IMDB" 
+
+Users can view the list of movies  ,and when they select the movie,the movie info is displayed.such as the release date of movie and its rating.
+
+# Technologies used :
+React 
+
+Redux
+
+Javascript
+
+Antd .
+
+# Pages Created 
+Login page
+
+Register page 
+
+Movie info page with Redux
+
+Movie List page with ReduX
+
+Login and Register Authentication 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
