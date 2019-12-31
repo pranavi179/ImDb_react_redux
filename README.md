@@ -1,4 +1,4 @@
-### Imdb clone
+# Imdb clone
 
 It is the clone of famous movie application "IMDB" 
 
