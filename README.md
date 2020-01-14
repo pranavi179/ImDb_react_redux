@@ -25,6 +25,14 @@ Movie List page with ReduX
 Login and Register Authentication 
 
 
+## Screenshots
+### list of movies
+![movielist](https://github.com/pranavi179/ImDb_react_redux/blob/frontend/screenshot/movielist.png)
+<br />
+
+### details of the selected movie
+![moviedetails](https://github.com/pranavi179/ImDb_react_redux/blob/frontend/screenshot/moviedetail.png)
+<br />
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
